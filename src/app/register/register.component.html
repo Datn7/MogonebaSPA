@@ -1,0 +1,30 @@
+<form [formGroup]="form" (ngSubmit)="submit()">
+  <label>
+    Username:
+    <input formControlName="username" />
+    <span *ngIf="form.get('username')?.touched && form.get('username')?.invalid">
+      Username is required
+    </span>
+  </label>
+
+  <label>
+    Email:
+    <input formControlName="email" />
+    <span *ngIf="form.get('email')?.touched && form.get('email')?.hasError('required')">
+      Email is required
+    </span>
+    <span *ngIf="form.get('email')?.hasError('email')">
+      Invalid email format
+    </span>
+  </label>
+
+  <label>
+    Password:
+    <input type="password" formControlName="password" />
+    <span *ngIf="form.get('password')?.touched && form.get('password')?.invalid">
+      Password is required
+    </span>
+  </label>
+
+  <button type="submit" [disabled]="form.invalid">Register</button>
+</form>
