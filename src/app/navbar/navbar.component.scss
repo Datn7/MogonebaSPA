@@ -7,35 +7,35 @@
   border-bottom: 1px solid #e0e0e0;
   font-family: 'Inter', sans-serif;
 
- .logo-area {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  text-decoration: none;
-  cursor: pointer;
+  .logo-area {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    cursor: pointer;
 
-  .logo-icon {
-    height: 32px;
-    width: 32px;
+    .logo-icon {
+      height: 32px;
+      width: 32px;
+    }
+
+    .logo-text {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: #333;
+    }
+
+    &:hover .logo-text {
+      color: #4a90e2;
+    }
   }
-
-  .logo-text {
-    font-weight: 700;
-    font-size: 1.2rem;
-    color: #333;
-  }
-
-  &:hover .logo-text {
-    color: #4a90e2;
-  }
-}
-
 
   .nav-links {
     display: flex;
     gap: 1.5rem;
     list-style: none;
     margin: 0;
+    margin-left: 2rem;
 
     li a {
       text-decoration: none;
@@ -55,6 +55,13 @@
     }
   }
 
+  .auth-actions {
+    margin-left: auto; // <- pushes it to the far right
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
   .register-btn {
     background: #4a90e2;
     color: #fff;
@@ -69,37 +76,41 @@
       cursor: pointer;
     }
   }
-}
 
-.profile-wrapper {
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
+  .profile-wrapper {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
 
-  .profile-btn {
-    padding: 0.5rem;
-    font-weight: 600;
-    color: #333;
-  }
-
-  .dropdown {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background: white;
-    border: 1px solid #ddd;
-    min-width: 150px;
-    z-index: 10;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-
-    a {
-      display: block;
-      padding: 0.75rem 1rem;
+    .profile-btn {
+      padding: 0.5rem;
+      font-weight: 600;
       color: #333;
-      text-decoration: none;
+      background: #f3f3f3;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
 
-      &:hover {
-        background: #f0f0f0;
+    .dropdown {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background: white;
+      border: 1px solid #ddd;
+      min-width: 150px;
+      z-index: 10;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      padding: 0.5rem 0;
+
+      a {
+        display: block;
+        padding: 0.75rem 1rem;
+        color: #333;
+        text-decoration: none;
+
+        &:hover {
+          background: #f0f0f0;
+        }
       }
     }
   }

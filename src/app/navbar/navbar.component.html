@@ -13,14 +13,22 @@
     <li><a routerLink="/profile" routerLinkActive="active">Profile</a></li>
   </ul>
 
-<a *ngIf="!isLoggedIn" routerLink="/login" class="nav-btn">Login</a>
 
-<div *ngIf="isLoggedIn" class="profile-wrapper" (click)="toggleDropdown()">
-  <span class="profile-btn">Profile ⌄</span>
-  <div class="dropdown" *ngIf="dropdownOpen">
-    <a routerLink="/profile">View Profile</a>
-    <a (click)="logout()">Logout</a>
+
+
+
+<div class="auth-actions">
+  <a *ngIf="!isLoggedIn" routerLink="/login" class="register-btn">Login</a>
+  <div *ngIf="isLoggedIn" class="profile-wrapper" (click)="toggleDropdown()">
+    <span class="profile-btn">Profile ▾</span>
+    <div *ngIf="dropdownOpen" class="dropdown">
+      <a routerLink="/profile">View Profile</a>
+      <a (click)="logout()">Logout</a>
+    </div>
   </div>
 </div>
+
+
+
 
 </nav>

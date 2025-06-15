@@ -10,4 +10,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 })
 export class App {
   protected title = 'MogonebaSPA';
+
+
+  
 }
