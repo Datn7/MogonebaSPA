@@ -8,10 +8,17 @@ export class AuthService {
 
   login() {
     this.loggedIn.next(true);
+    localStorage.setItem('isLoggedIn', 'true');
   }
 
   logout() {
     this.loggedIn.next(false);
+    localStorage.removeItem('isLoggedIn');
+  }
+
+  restoreLogin() {
+    const stored = localStorage.getItem('isLoggedIn');
+    this.loggedIn.next(stored === 'true');
   }
 
   get isLoggedIn(): boolean {

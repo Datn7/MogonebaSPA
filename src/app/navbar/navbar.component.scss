@@ -70,3 +70,37 @@
     }
   }
 }
+
+.profile-wrapper {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+
+  .profile-btn {
+    padding: 0.5rem;
+    font-weight: 600;
+    color: #333;
+  }
+
+  .dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: white;
+    border: 1px solid #ddd;
+    min-width: 150px;
+    z-index: 10;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+
+    a {
+      display: block;
+      padding: 0.75rem 1rem;
+      color: #333;
+      text-decoration: none;
+
+      &:hover {
+        background: #f0f0f0;
+      }
+    }
+  }
+}
