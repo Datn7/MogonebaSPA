@@ -4,5 +4,5 @@ export interface Memory {
   description: string;
   date: string;
   location: string;
-  imageUrl: string;
+  imageUrl?: string;
 }

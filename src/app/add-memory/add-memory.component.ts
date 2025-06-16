@@ -26,12 +26,20 @@ export class AddMemoryComponent {
   }
 
   submit() {
-    if (this.memoryForm.valid) {
-      this.http.post(`${environment.apiBaseUrl}/memories`, this.memoryForm.value)
-        .subscribe({
-          next: () => this.router.navigate(['/memories']),
-          error: err => console.error('Failed to add memory', err)
-        });
-    }
+  if (this.memoryForm.valid) {
+    const formValue = this.memoryForm.value;
+
+    // Convert date to ISO format (required by .NET)
+    const memory = {
+      ...formValue,
+      date: new Date(formValue.date).toISOString()
+    };
+
+    this.http.post(`${environment.apiBaseUrl}/memories/create`, memory)
+      .subscribe({
+        next: () => this.router.navigate(['/memories']),
+        error: err => console.error('Failed to add memory', err)
+      });
   }
+}
 }
