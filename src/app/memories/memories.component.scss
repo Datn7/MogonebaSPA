@@ -8,7 +8,7 @@
   .memory-card {
     background: #fff;
     border-radius: 8px;
-    box-shadow: 0 1px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
     margin-bottom: 1.5rem;
     display: flex;
     overflow: hidden;
@@ -36,5 +36,29 @@
         margin-top: 0.5rem;
       }
     }
+  }
+}
+
+.delete-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease-in-out;
+
+  i {
+    font-size: 1.1rem;
+  }
+
+  .delete-btn :hover {
+    background-color: darken(#5c0000, 10%);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transform: scale(1.03);
+  }
+
+  .delete-btn :active {
+    transform: scale(0.98);
   }
 }
