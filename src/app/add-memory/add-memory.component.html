@@ -1,0 +1,31 @@
+<div class="memory-form-container">
+  <h2>Add a New Memory</h2>
+  <form [formGroup]="memoryForm" (ngSubmit)="submit()">
+    <label>
+      Title
+      <input type="text" formControlName="title" placeholder="Memory title..." />
+    </label>
+
+    <label>
+      Description
+      <textarea formControlName="description" placeholder="Share your experience..."></textarea>
+    </label>
+
+    <label>
+      Date
+      <input type="date" formControlName="date" />
+    </label>
+
+    <label>
+      Location
+      <input type="text" formControlName="location" placeholder="Where did it happen?" />
+    </label>
+
+    <label>
+      Image URL
+      <input type="url" formControlName="imageUrl" placeholder="Paste image link (optional)" />
+    </label>
+
+    <button type="submit" [disabled]="memoryForm.invalid">Submit Memory</button>
+  </form>
+</div>

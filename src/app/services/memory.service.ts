@@ -8,6 +8,7 @@ import { environment } from '../../environments/environment.server';
   providedIn: 'root'
 })
 export class MemoryService {
+  
   private apiUrl = `${environment.apiBaseUrl}/memories`;
 
   constructor(private http: HttpClient) {}
@@ -16,7 +17,9 @@ export class MemoryService {
     return this.http.get<Memory[]>(this.apiUrl);
   }
 
-  create(memory: Memory): Observable<Memory> {
-    return this.http.post<Memory>(this.apiUrl, memory);
-  }
+  
+
+ addMemory(memory: Memory): Observable<any> {
+  return this.http.post(`${environment.apiBaseUrl}/memories/`, memory);
+}
 }

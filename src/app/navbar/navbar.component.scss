@@ -115,3 +115,26 @@
     }
   }
 }
+
+.add-memory-btn {
+  background: #4a90e2;
+  color: white;
+  padding: 0.5rem 1.2rem;
+  font-weight: 500;
+  border-radius: 4px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: background 0.2s ease;
+
+  .plus-icon {
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+
+  &:hover {
+    background: #3a78c2;
+  }
+}
+
